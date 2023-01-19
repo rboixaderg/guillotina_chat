@@ -4,6 +4,19 @@ app_settings = {
     # provide custom application settings here...
 }
 
+configure.role("guillotina_chat.ConversationParticipant",
+               "Conversation Participant",
+               "Users that are part of a conversation", False)
+configure.grant(
+    permission="guillotina.ViewContent",
+    role="guillotina_chat.ConversationParticipant")
+configure.grant(
+    permission="guillotina.AccessContent",
+    role="guillotina_chat.ConversationParticipant")
+configure.grant(
+    permission="guillotina.AddContent",
+    role="guillotina_chat.ConversationParticipant")
+
 
 def includeme(root):
     """
