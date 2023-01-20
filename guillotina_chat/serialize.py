@@ -6,9 +6,6 @@ from zope.interface import Interface
 
 from guillotina_chat.content import IConversation, IMessage
 
-import pdb
-pdb.set_trace()
-
 
 @configure.adapter(
     for_=(IConversation, Interface),
@@ -36,6 +33,4 @@ class MessageJSONSummarySerializer(DefaultJSONSummarySerializer):
             'text': self.context.text,
             'author': get_owners(self.context)[0]
         })
-        import pdb
-        pdb.set_trace()
         return data
