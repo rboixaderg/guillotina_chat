@@ -1,7 +1,13 @@
 from guillotina import configure
 
 app_settings = {
-    # provide custom application settings here...
+    "load_utilities": {
+        "guillotina_chat.message_sender": {
+            "provides": "guillotina_chat.utility.IMessageSender",
+            "factory": "guillotina_chat.utility.MessageSenderUtility",
+            "settings": {}
+        },
+    }
 }
 
 configure.role("guillotina_chat.ConversationParticipant",
@@ -28,3 +34,4 @@ def includeme(root):
     configure.scan('guillotina_chat.subscribers')
     configure.scan('guillotina_chat.serialize')
     configure.scan('guillotina_chat.services')
+    configure.scan('guillotina_chat.utility')
