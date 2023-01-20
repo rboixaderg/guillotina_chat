@@ -25,3 +25,4 @@ def includeme(root):
     configure.scan('guillotina_chat.api')
     configure.scan('guillotina_chat.install')
     configure.scan('guillotina_chat.content')
+    configure.scan('guillotina_chat.subscribers')
