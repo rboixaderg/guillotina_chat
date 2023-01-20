@@ -27,3 +27,4 @@ def includeme(root):
     configure.scan('guillotina_chat.content')
     configure.scan('guillotina_chat.subscribers')
     configure.scan('guillotina_chat.serialize')
+    configure.scan('guillotina_chat.services')
