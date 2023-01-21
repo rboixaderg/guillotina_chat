@@ -43,3 +43,6 @@ jwt:
   algorithm: HS256
 jsapps:
   +admin: guillotina:static/executioner
+jwk:
+  k: Jg2oze4sTlw0QtLAF6vPGpygfUdzFLa_MufKKBWgvXE
+  kty: oct
