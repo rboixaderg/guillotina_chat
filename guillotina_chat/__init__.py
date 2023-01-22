@@ -7,7 +7,10 @@ app_settings = {
             "factory": "guillotina_chat.utility.MessageSenderUtility",
             "settings": {}
         },
-    }
+    },
+    "static": {
+        "static": "guillotina_chat:static"
+    },
 }
 
 configure.role("guillotina_chat.ConversationParticipant",
@@ -35,3 +38,4 @@ def includeme(root):
     configure.scan('guillotina_chat.serialize')
     configure.scan('guillotina_chat.services')
     configure.scan('guillotina_chat.utility')
+    configure.scan('guillotina_chat.ws')
